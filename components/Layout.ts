@@ -1,6 +1,5 @@
 import { ghPagesBasePath, html, type Html } from "@mastrojs/mastro";
 import { Header } from "./Header.ts";
-import { Footer } from "./Footer.ts";
 
 export const basePath = ghPagesBasePath();
 
@@ -22,11 +21,10 @@ export const Layout = (props: Props) =>
         ${Header()}
 
         <main>
-          <h1>${props.title}</h1>
           ${props.children}
         </main>
 
-        ${Footer()}
+
       </body>
     </html>
   `;

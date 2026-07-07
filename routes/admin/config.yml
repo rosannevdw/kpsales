@@ -14,3 +14,18 @@ collections:
     fields:
       - { label: Title, name: title, widget: string }
       - { label: Body, name: body, widget: markdown }
+  - name: pillars
+    label: Pillars
+    folder: /data/pillars
+    format: json
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - name: slides
+        label: slides
+        widget: list
+        fields:
+        - { name: image, label: Image, widget: image }
+        - { label: Title, name: title, widget: string }
+        - { label: Body, name: body, widget: markdown }

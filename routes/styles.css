@@ -1,14 +1,32 @@
+@font-face {
+  font-family: "LTMuseum";
+  src:
+    local("LTMuseum"),
+    url("LTMuseum-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Suisse";
+  src:
+    local("Suisse"),
+    url("SuisseIntl-Regular.woff2") format("woff2");
+}
+
 html {
-  --color-accent: #ee8b00;
-  --color-main: #1a1a1a;
+  --color-accent: #686f45;
+  --color-accent-2: #a74f21;
+  --color-accent-3: #fcf7ec;
+  --color-main: #2c2825;
+  --color-main-light: #e2e2e2;
   --font-size-main: 1.125em;
-  --font-main: Georgia, serif;
-  --font-display: Helvetica, Arial, sans-serif;
+  --font-main: Suisse, Arial, sans-serif;
+  --font-display: LTMuseum, Georgia, serif;
+  --spacing-wider: 1px;
 }
 
 body {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+  display: flex;
+  gap: 2em;
   min-height: 100vh;
   margin: 0 auto;
   color: var(--color-main);
@@ -17,10 +35,7 @@ body {
   overflow-wrap: break-word;
   text-rendering: optimizeLegibility;
   font-kerning: normal;
-
-  @media (max-width: 1000px) {
-    --font-size-main: 1em;
-  }
+  padding: 2em;
 }
 
 a {
@@ -33,28 +48,27 @@ p {
   hyphens: auto;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3 {
   line-height: 1.2;
-  margin: 1.75lh 0 1lh 0;
+  margin: 0 0 1lh 0;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: var(--spacing-wider);
+  font-weight: normal;
 }
 h1 {
-  font-size: 2.5em;
+  font-size: 2em;
 }
 h2 {
-  font-size: 2em;
+  font-size: 1.5em;
 }
 h3 {
   font-size: 1.25em;
 }
 
 ol, ul {
-  padding-left: 1.5em;
-  @media (min-width: 1000px) {
-    padding-left: 0;
-  }
-}
-li > ol, li > ul {
-  padding-left: 1.5em;
+  padding-left: 0em;
+  list-style-type: none;
 }
 p:has(+ ul) {
   margin-bottom: 0.1em;
@@ -92,34 +106,40 @@ section {
 }
 
 header {
-  color: var(--color-accent);
-  font-family: var(--font-display);
-  font-size: 1.75em;
-  border-bottom: 2px solid var(--color-accent);
-  padding: 2em 2em 1.5em 2em;
-  @media (max-width: 1000px) {
-    padding-left: 1rem;
-  }
+  position: sticky;
+  width: 25vw;
+  top: 1rem;
+  height: 94vh;
+  display: grid;
   a {
     text-decoration: none;
   }
-}
-
-footer {
-  background-color: var(--color-accent);
-  padding: 2rem 0;
-  margin-top: 3em;
-  a {
-    color: var(--color-main);
+  .navigation {
+    text-transform: uppercase;
+    li:not(:last-child) {
+      border-bottom: solid 1px;
+    }
+    align-self: end;
+  }
+  .subnav {
+    padding-left: 1.5em;;
   }
 }
 
-main, footer > div {
+main {
+  flex: 1;
+  min-width: 0;
+}
+
+.slider {
   width: 100%;
-  max-width: 47rem;
-  margin: 0 auto;
-  box-sizing: border-box;
-  @media (max-width: 1000px) {
-    padding: 0 1rem;
-  }
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+.slide {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  scroll-snap-align: center;
 }
