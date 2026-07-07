@@ -1,0 +1,6 @@
+{
+    "recommendations": [
+        "ms-fast.fast-tagged-templates",
+        "denoland.vscode-deno"
+    ]
+}
