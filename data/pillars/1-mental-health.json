@@ -1,0 +1,16 @@
+{
+  "title": "Mental Health",
+  "url": "/360/mental-health",
+  "slides": [
+    {
+      "image": "/media/Friedhof_Rosenberg_05.jpg",
+      "title": "treatments",
+      "body": "test"
+    },
+    {
+      "image": "/media/Friedhof_Rosenberg_05.jpg",
+      "title": "experts",
+      "body": "test 2"
+    }
+  ]
+}

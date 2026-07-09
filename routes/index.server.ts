@@ -1,22 +1,22 @@
 import { html, htmlToResponse } from "@mastrojs/mastro";
-import { Layout } from "../components/Layout.ts";
+import { Startpage } from "../components/Startpage.ts";
 
 export const GET = () =>
   htmlToResponse(
-    Layout({
-      title: "Welcome to your website!",
+    Startpage({
       children: html`
-      <ul class="slider">
-        <li class="slide">
-          content 1
-        </li>
-        <li class="slide">
-          content 2
-        </li>
-        <li class="slide">
-          content 3
-        </li>
-    </ul>
+      
+      <div class="startscreen">
+        <a href="/360" class="logo">
+          <img
+          src="media/TKP_Linen.svg"
+          alt="Kusnacht Practice Logo" />
+        </a>
+        <a href="/practice/film" class="movielink">
+           📹
+        </a>
+      </div>
+
       `,
     }),
   );

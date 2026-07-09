@@ -11,8 +11,11 @@ export const Header = () =>
       <ul class="navigation">
         <li>360° Approach
           <ul class="subnav">
-            ${pillars.map(section =>
-              html`<li>${section.title}</li>`)}
+            ${pillars.map(pillar =>
+              html`
+              <li class=${pathname.startsWith(pillar.url) ? "active" : ""}>
+                <a href=${pillar.url}>${pillar.title}</a>
+              </li>`)}
           </ul>
         </li>
         <li>Kusnacht Practice

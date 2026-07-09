@@ -4,14 +4,11 @@ import { Header } from "./Header.ts";
 export const basePath = ghPagesBasePath();
 
 interface Props {
-  title: string;
   children: Html;
-  req: Request;
 }
 
-export const Layout = (props: Props) => {
-  const { pathname } = new URL(props.req.url);
-  return html`
+export const Startpage = (props: Props) =>
+  html`
     <!doctype html>
     <html lang="en">
       <head>
@@ -20,7 +17,7 @@ export const Layout = (props: Props) => {
         <meta name="viewport" content="width=device-width">
       </head>
       <body>
-        ${Header()}
+
 
         <main>
           ${props.children}
@@ -30,4 +27,3 @@ export const Layout = (props: Props) => {
       </body>
     </html>
   `;
-}
