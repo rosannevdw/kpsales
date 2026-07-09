@@ -21,12 +21,14 @@ html {
   --font-size-main: 1.125em;
   --font-main: Suisse, Arial, sans-serif;
   --font-display: LTMuseum, Georgia, serif;
+  --page-padding: 2em;
   --spacing-wider: 1px;
 }
 
 body {
   display: flex;
   gap: 2em;
+  align-items: flex-start;
   min-height: 100vh;
   margin: 0 auto;
   color: var(--color-main);
@@ -35,29 +37,19 @@ body {
   overflow-wrap: break-word;
   text-rendering: optimizeLegibility;
   font-kerning: normal;
-  padding: 2em;
+  padding: var(--page-padding);
   box-sizing: border-box;
   opacity: 1;
   transition: opacity 600ms ease;
 }
 
-body.page-360 {
-  animation: page-enter 600ms ease;
-}
-
 body.is-leaving {
   opacity: 0;
-  animation: none;
 }
 
-@keyframes page-enter {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
+body.page-index {
+  display: block;
+  padding: 0;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -65,11 +57,6 @@ body.is-leaving {
     animation: none;
     transition: none;
   }
-}
-
-a {
-  color: var(--color-main);
-  text-decoration: none;
 }
 
 p {
@@ -96,10 +83,16 @@ h3 {
   font-size: 1.25em;
 }
 
+a {
+  color: var(--color-main);
+  text-decoration: none;
+}
+
 ol, ul {
   padding-left: 0em;
   list-style-type: none;
 }
+
 p:has(+ ul) {
   margin-bottom: 0.1em;
 }
@@ -107,12 +100,6 @@ p:has(+ ul) {
 img, svg {
   height: auto;
   max-width: 100%;
-}
-
-blockquote {
-  border-left: 1px solid lightgray;
-  padding-left: 1em;
-  margin-left: 0;
 }
 
 pre {
@@ -131,16 +118,13 @@ table {
   text-align: left;
 }
 
-section {
-  margin: 4em 0;
-}
-
 header {
   position: sticky;
   width: 25vw;
-  top: 1rem;
-  height: 94vh;
+  top: var(--page-padding);
+  height: calc(100vh - (var(--page-padding) * 2));
   display: grid;
+  flex: 0 0 25vw;
   a {
     opacity: 0.35;
     transition: opacity 0.5s;
@@ -164,35 +148,54 @@ header {
     }
   }
 }
+header.hide-subnav {
+  .subnav {
+    display: none;
+  }
+} 
 
 main {
   flex: 1;
   min-width: 0;
+  min-height: calc(100vh - (var(--page-padding) * 2));
+}
+
+body.page-index main {
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
 }
 
 .slider {
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - (var(--page-padding) * 2));
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
 }
 .slide {
-  height: 100vh;
+  min-height: calc(100vh - (var(--page-padding) * 2));
   display: grid;
   place-items: center;
   scroll-snap-align: center;
 }
 .startscreen {
-  background-image: url("media/precisionmedicine.jpg") ;
-  background-repeat: no-repeat;
-  background-size: 104%;
-  background-position: 50% 50%;
-  animation: startscreen-drift 10s ease-in-out infinite alternate;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   position: relative;
+  overflow: hidden;
+  .logo,
+  .movielink {
+    position: relative;
+    z-index: 1;
+  }
   .logo {
     width: 500px;
     align-self: center;
@@ -208,20 +211,77 @@ main {
   }
 }
 
+.startscreen::before {
+  content: "";
+  position: absolute;
+  inset: -4%;
+  background-image: url("media/precisionmedicine.jpg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: startscreen-drift 10s ease-in-out infinite alternate;
+}
+
 @keyframes startscreen-drift {
   from {
-    background-size: 104%;
-    background-position: 50% 50%;
+    transform: scale(1);
   }
 
   to {
-    background-size: 120%;
-    background-position: 52% 48%;
+    transform: scale(1.08) translate(1%, -1%);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .startscreen {
+  .startscreen::before {
     animation: none;
   }
+}
+
+/*slide layouts*/
+
+.col2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 1fr;
+  gap: 1em;
+  height: calc(100vh - (var(--page-padding) * 2));
+  margin: 0;
+}
+
+.image-tile {
+  min-width: 0;
+  min-height: 0;
+}
+
+.image-tile a {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.image-tile a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgb(0 0 0 / 0.18);
+}
+
+.image-tile img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-tile h3 {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: white;
+  text-align: center;
 }

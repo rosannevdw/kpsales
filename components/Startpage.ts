@@ -16,7 +16,7 @@ export const Startpage = (props: Props) => {
         <link rel="stylesheet" href=${basePath + "/styles.css"}>
         <meta name="viewport" content="width=device-width">
       </head>
-      <body>
+      <body class="page-index">
 
 
         <main>

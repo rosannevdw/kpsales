@@ -1,9 +1,10 @@
 import { html } from "@mastrojs/mastro";
 import { pillars } from "../models/pillars.ts";
 
-export const Header = ({ pathname }: { pathname: string }) =>
-  html`
-    <header>
+export const Header = ({ pathname }: { pathname: string }) => {
+  const hideSubnav = pathname === "/360" || pathname === "/practice";
+  return html`
+    <header class=${hideSubnav ? "hide-subnav" : ""}>
       <div>
         <h2>Title</h2>
         <p>Maybe intro text</p>
@@ -15,7 +16,7 @@ export const Header = ({ pathname }: { pathname: string }) =>
             ${pillars.map(pillar =>
               html`
               <li class=${pathname.startsWith(pillar.url) ? "active" : ""}>
-                <a href=${pillar.url}>${pillar.title}</a>
+                <a href=${pillar.url} class=${pathname === pillar.url ? "active" : ""}>${pillar.title}</a>
               </li>`)}
           </ul>
         </li>
@@ -31,3 +32,4 @@ export const Header = ({ pathname }: { pathname: string }) =>
       </ul>
     </header>
   `;
+}

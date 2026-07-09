@@ -5,7 +5,7 @@ export const GET = (req: Request) =>
   htmlToResponse(
     Layout({
       req,
-      title: "Welcome to your website!",
+      title: "BIO-R® Method",
       children: html`
       <ul class="slider">
         <li class="slide">

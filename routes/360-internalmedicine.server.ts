@@ -5,7 +5,7 @@ export const GET = (req: Request) =>
   htmlToResponse(
     Layout({
       req,
-      title: "Welcome to your website!",
+      title: "Internal Medicine",
       children: html`
       <ul class="slider">
         <li class="slide">
