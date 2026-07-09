@@ -37,10 +37,39 @@ body {
   font-kerning: normal;
   padding: 2em;
   box-sizing: border-box;
+  opacity: 1;
+  transition: opacity 600ms ease;
+}
+
+body.page-360 {
+  animation: page-enter 600ms ease;
+}
+
+body.is-leaving {
+  opacity: 0;
+  animation: none;
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    animation: none;
+    transition: none;
+  }
 }
 
 a {
-  color: var(--color-accent);
+  color: var(--color-main);
+  text-decoration: none;
 }
 
 p {
@@ -113,13 +142,16 @@ header {
   height: 94vh;
   display: grid;
   a {
-    text-decoration: none;
+    opacity: 0.35;
+    transition: opacity 0.5s;
+  }
+  a.active, a:hover {
+    opacity: 1;
   }
   .navigation {
     text-transform: uppercase;
     font-size: 0.8em;
     letter-spacing: var(--spacing-wider);
-    opacity: 0.3;
     > li {
       margin-top: 0.9ch;
     }
@@ -153,11 +185,14 @@ main {
 .startscreen {
   background-image: url("media/precisionmedicine.jpg") ;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 104%;
+  background-position: 50% 50%;
+  animation: startscreen-drift 10s ease-in-out infinite alternate;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
+  position: relative;
   .logo {
     width: 500px;
     align-self: center;
@@ -165,7 +200,28 @@ main {
     padding: 10em;
   }
   .movielink {
-    align-self: end;
-    margin-right: 2em;
+    position: absolute;
+    right: 2em;
+    bottom: 2em;
+    color: var(--color-accent-3);
+    opacity: 0.35;
+  }
+}
+
+@keyframes startscreen-drift {
+  from {
+    background-size: 104%;
+    background-position: 50% 50%;
+  }
+
+  to {
+    background-size: 120%;
+    background-position: 52% 48%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .startscreen {
+    animation: none;
   }
 }

@@ -1,7 +1,7 @@
 import { html } from "@mastrojs/mastro";
 import { pillars } from "../models/pillars.ts";
 
-export const Header = () =>
+export const Header = ({ pathname }: { pathname: string }) =>
   html`
     <header>
       <div>
@@ -9,7 +9,8 @@ export const Header = () =>
         <p>Maybe intro text</p>
       </div>
       <ul class="navigation">
-        <li>360° Approach
+        <li>
+          <a href="/360">360° Approach</a>
           <ul class="subnav">
             ${pillars.map(pillar =>
               html`
@@ -18,7 +19,8 @@ export const Header = () =>
               </li>`)}
           </ul>
         </li>
-        <li>Kusnacht Practice
+        <li>
+          <a href="/practice">Kusnacht Practice</a>
           <ul class="subnav">
             <li>Point 1</li>
             <li>Point 2</li>

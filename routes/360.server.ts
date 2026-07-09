@@ -5,7 +5,8 @@ export const GET = (req: Request) =>
   htmlToResponse(
     Layout({
       req,
-      title: "Welcome to your website!",
+      title: "A 360° Approach",
+      bodyClass: "page-360",
       children: html`
         <ul class="slider">
           <li class="slide">

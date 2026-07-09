@@ -7,6 +7,7 @@ interface Props {
   title: string;
   children: Html;
   req: Request;
+  bodyClass?: string;
 }
 
 export const Layout = (props: Props) => {
@@ -19,8 +20,8 @@ export const Layout = (props: Props) => {
         <link rel="stylesheet" href=${basePath + "/styles.css"}>
         <meta name="viewport" content="width=device-width">
       </head>
-      <body>
-        ${Header()}
+      <body class=${props.bodyClass ?? ""}>
+        ${Header({ pathname })}
 
         <main>
           ${props.children}
