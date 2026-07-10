@@ -9,6 +9,7 @@ export const Header = ({ pathname }: { pathname: string }) => {
   return html`
     <header>
       <div>
+        <h3>Subtitle</h3>
         <h2>Title</h2>
         <p>Maybe intro text</p>
       </div>

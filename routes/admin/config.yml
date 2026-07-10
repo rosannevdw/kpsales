@@ -8,12 +8,6 @@ media_folder: /routes/media
 public_folder: /media
 
 collections:
-  - name: posts
-    label: Posts
-    folder: /data/posts
-    fields:
-      - { label: Title, name: title, widget: string }
-      - { label: Body, name: body, widget: markdown }
   - name: pillars
     label: Pillars
     folder: /data/pillars
@@ -22,10 +16,17 @@ collections:
       - label: Title
         name: title
         widget: string
-      - name: slides
-        label: slides
+      - label: Slides
+        name: slides
         widget: list
         fields:
-        - { name: image, label: Image, widget: image }
-        - { label: Title, name: title, widget: string }
-        - { label: Body, name: body, widget: markdown }
+          - { label: Slide Title, name: title, widget: string }
+          - { label: Slide Body, name: body, widget: markdown }
+          - label: Slide Images
+            name: images
+            widget: list
+            min: 1
+            max: 6
+            fields: 
+            - { label: Slide Image, name: image, widget: image }
+            - { label: Large?, name: large, widget: boolean, default: false }
