@@ -7,7 +7,7 @@ export const GET = (req: Request) =>
       req,
       title: "A 360° Approach",
       children: html`
-        <ul class="col2">
+        <ul class="slide">
           <li class="image-tile">
             <a href="360-mentalhealth">
               <img src="media/precisionmedicine.jpg" alt="">

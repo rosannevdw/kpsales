@@ -1,0 +1,11 @@
+{
+  "title": "Our Clinic",
+  "url": "/practice-clinic",
+  "slides": [
+    {
+      "image": "/media/Frontwork-Friedhof-Winterthur-Quer3.jpg",
+      "title": "Internal medicine",
+      "body": "test"
+    }
+  ]
+}
