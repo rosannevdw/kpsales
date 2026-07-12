@@ -1,0 +1,30 @@
+{
+  "order": 4,
+  "title": "Hospitality",
+  "slides": [
+    {
+      "title": "Internal medicine",
+      "body": "test 2",
+      "images": [
+        {
+          "src": "/media/precisionmedicine.jpg",
+          "large": false
+        },
+        {
+          "src": "/media/precisionmedicine.jpg",
+          "large": false
+        }
+      ]
+    },
+    {
+      "title": "foo bar",
+      "body": "asf",
+      "images": [
+        {
+          "src": "/media/precisionmedicine.jpg",
+          "large": false
+        }
+      ]
+    }
+  ]
+}

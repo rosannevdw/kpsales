@@ -1,0 +1,16 @@
+{
+  "order": 1,
+  "title": "Mental Health",
+  "slides": [
+    {
+      "title": "treatments",
+      "body": "test",
+      "images": [
+        {
+          "src": "/media/precisionmedicine.jpg",
+          "large": false
+        }
+      ]
+    }
+  ]
+}

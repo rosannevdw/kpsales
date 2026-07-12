@@ -1,0 +1,16 @@
+{
+  "order": 2,
+  "title": "Internal Medicine",
+  "slides": [
+    {
+      "title": "Internal medicine",
+      "body": "test",
+      "images": [
+        {
+          "src": "/media/precisionmedicine.jpg",
+          "large": false
+        }
+      ]
+    }
+  ]
+}

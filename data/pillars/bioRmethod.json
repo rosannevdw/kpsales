@@ -1,0 +1,16 @@
+{
+  "order": 3,
+  "title": "Bio-R® method",
+  "slides": [
+    {
+      "title": "Internal medicine",
+      "body": "test",
+      "images": [
+        {
+          "src": "/media/precisionmedicine.jpg",
+          "large": false
+        }
+      ]
+    }
+  ]
+}

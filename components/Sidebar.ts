@@ -2,20 +2,25 @@ import { html } from "@mastrojs/mastro";
 import { pillars } from "../models/pillars.ts";
 import { about } from "../models/about.ts";
 
-export const Header = ({ pathname }: { pathname: string }) => {
+interface Props {
+  pathname: string;
+  title: string;
+}
+
+export const Sidebar = ({ pathname, title }: Props) => {
   const showPillarsSubnav = pathname.startsWith("/360-");
   const showAboutSubnav = pathname.startsWith("/practice-");
 
   return html`
-    <header>
+    <div class="sidebar">
       <div>
-        <h3>Subtitle</h3>
+        <h3>${title}</h3>
         <h2>Title</h2>
         <p>Maybe intro text</p>
       </div>
       <ul class="navigation">
         <li>
-          <a href="/360">360° Approach</a>
+          <a href="/360/">360° Approach</a>
           ${showPillarsSubnav
             ? html`
               <ul class="subnav">
@@ -43,6 +48,6 @@ export const Header = ({ pathname }: { pathname: string }) => {
             : ""}
         </li>
       </ul>
-    </header>
+    </div>
   `;
 }

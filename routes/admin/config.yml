@@ -12,6 +12,8 @@ collections:
     label: Pillars
     folder: /data/pillars
     format: json
+    reorder: true
+    sortable_fields: []
     fields:
       - label: Title
         name: title
@@ -28,5 +30,5 @@ collections:
             min: 1
             max: 6
             fields: 
-            - { label: Slide Image, name: image, widget: image }
+            - { label: Image, name: src, widget: image }
             - { label: Large?, name: large, widget: boolean, default: false }

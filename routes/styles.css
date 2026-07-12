@@ -131,9 +131,7 @@ table {
   text-align: left;
 }
 
-/*header & navigation*/
-
-header {
+.sidebar {
   position: sticky;
   width: 25vw;
   top: var(--page-padding);
