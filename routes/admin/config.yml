@@ -23,7 +23,7 @@ collections:
         widget: list
         fields:
           - { label: Slide Title, name: title, widget: string }
-          - { label: Slide Body, name: body, widget: markdown }
+          - { label: Slide Body, name: body, widget: markdown, required: false }
           - label: Slide Images
             name: images
             widget: list
@@ -47,7 +47,7 @@ collections:
         widget: list
         fields:
           - { label: Slide Title, name: title, widget: string }
-          - { label: Slide Body, name: body, widget: markdown }
+          - { label: Slide Body, name: body, widget: markdown, required: false }
           - label: Slide Images
             name: images
             widget: list
