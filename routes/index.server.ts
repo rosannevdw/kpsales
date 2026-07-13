@@ -13,7 +13,7 @@ export const GET = () =>
           src="media/TKP_Linen.svg"
           alt="Kusnacht Practice Logo" />
         </a>
-        <a href="/practice-film" class="movielink">
+        <a href="/clinic/infocus" class="movielink">
            &rarr; KP film
         </a>
       </div>

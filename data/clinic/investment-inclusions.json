@@ -1,15 +1,11 @@
 {
-  "order": 4,
-  "title": "Hospitality",
+  "order": 3,
+  "title": "Investment & Inclusions",
   "slides": [
     {
-      "title": "Slide 1",
-      "body": "test 2",
+      "title": "Investment",
+      "body": "lorem ipsum",
       "images": [
-        {
-          "src": "/media/precisionmedicine.jpg",
-          "large": false
-        },
         {
           "src": "/media/precisionmedicine.jpg",
           "large": false
@@ -17,8 +13,8 @@
       ]
     },
     {
-      "title": "Slide 2",
-      "body": "body text",
+      "title": "Inclusions",
+      "body": "lorem ipsum",
       "images": [
         {
           "src": "/media/precisionmedicine.jpg",

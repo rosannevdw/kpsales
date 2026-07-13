@@ -31,4 +31,29 @@ collections:
             max: 6
             fields: 
             - { label: Image, name: src, widget: image }
-            - { label: Large?, name: large, widget: boolean, default: false }
+            - { label: Large?, name: large, widget: boolean, default: false, required: false }
+  - name: clinic
+    label: Kusnacht Practice
+    folder: /data/clinic
+    format: json
+    reorder: true
+    sortable_fields: []
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Slides
+        name: slides
+        widget: list
+        fields:
+          - { label: Slide Title, name: title, widget: string }
+          - { label: Slide Body, name: body, widget: markdown }
+          - label: Slide Images
+            name: images
+            widget: list
+            min: 1
+            max: 6
+            fields: 
+            - { label: Image, name: src, widget: image }
+            - { label: Large?, name: large, widget: boolean, default: false, required: false  }
+  

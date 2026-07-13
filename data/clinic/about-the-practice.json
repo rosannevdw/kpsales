@@ -1,0 +1,20 @@
+{
+  "order": 2,
+  "title": "About the Practice",
+  "slides": [
+    {
+      "title": "Our Story",
+      "body": "lorem ipsum",
+      "images": [
+        {
+          "src": "/media/precisionmedicine.jpg",
+          "large": true
+        },
+        {
+          "src": "/media/precisionmedicine.jpg",
+          "large": false
+        }
+      ]
+    }
+  ]
+}

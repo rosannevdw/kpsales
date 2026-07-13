@@ -23,36 +23,6 @@ export const Startpage = (props: Props) => {
           ${props.children}
         </main>
 
-        <script>
-          document.querySelectorAll("[data-transition-link]").forEach((link) => {
-            link.addEventListener("click", (event) => {
-              if (
-                event.defaultPrevented ||
-                event.metaKey ||
-                event.ctrlKey ||
-                event.shiftKey ||
-                event.altKey ||
-                link.target === "_blank"
-              ) {
-                return;
-              }
-
-              const href = link.getAttribute("href");
-
-              if (!href) {
-                return;
-              }
-
-              event.preventDefault();
-              document.body.classList.add("is-leaving");
-
-              window.setTimeout(() => {
-                window.location.href = href;
-              }, 600);
-            });
-          });
-        </script>
-
       </body>
     </html>
   `;

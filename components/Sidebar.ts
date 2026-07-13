@@ -1,6 +1,6 @@
 import { html } from "@mastrojs/mastro";
 import { pillars } from "../models/pillars.ts";
-import { about } from "../models/about.ts";
+import { clinic } from "../models/clinic.ts";
 
 interface Props {
   pathname: string;
@@ -8,18 +8,26 @@ interface Props {
 }
 
 export const Sidebar = ({ pathname, title }: Props) => {
-  const showPillarsSubnav = pathname.startsWith("/360-");
-  const showAboutSubnav = pathname.startsWith("/practice-");
+  const pillarLinks = pillars.map(pillar => ({
+    title: pillar.title,
+    url: `/360/${pillar.slug}`,
+  }));
+  const clinicLinks = clinic.map(clinicPage => ({
+    title: clinicPage.title,
+    url: `/clinic/${clinicPage.slug}`,
+  }));
+  const showPillarsSubnav = pathname === "/360/" || pathname.startsWith("/360/");
+  const showClinicSubnav = pathname === "/clinic/" || pathname.startsWith("/clinic/");
 
   return html`
     <div class="sidebar">
       <ul class="navigation">
         <li>
-          <a href="/360/">360° Approach</a>
+          <a href="/360/" class=${showPillarsSubnav ? "active" : ""}>360° Approach</a>
           ${showPillarsSubnav
             ? html`
               <ul class="subnav">
-                ${pillars.map(pillar => html`
+                ${pillarLinks.map(pillar => html`
                   <li class=${pathname.startsWith(pillar.url) ? "active" : ""}>
                     <a href=${pillar.url} class=${pathname === pillar.url ? "active" : ""}>${pillar.title}</a>
                   </li>
@@ -29,13 +37,13 @@ export const Sidebar = ({ pathname, title }: Props) => {
             : ""}
         </li>
         <li>
-          <a href="/practice">Kusnacht Practice</a>
-          ${showAboutSubnav
+          <a href="/clinic/" class=${showClinicSubnav ? "active" : ""}>Kusnacht Practice</a>
+          ${showClinicSubnav
             ? html`
               <ul class="subnav">
-                ${about.map(clinic => html`
-                  <li class=${pathname.startsWith(clinic.url) ? "active" : ""}>
-                    <a href=${clinic.url} class=${pathname === clinic.url ? "active" : ""}>${clinic.title}</a>
+                ${clinicLinks.map(clinicPage => html`
+                  <li class=${pathname.startsWith(clinicPage.url) ? "active" : ""}>
+                    <a href=${clinicPage.url} class=${pathname === clinicPage.url ? "active" : ""}>${clinicPage.title}</a>
                   </li>
                 `)}
               </ul>
@@ -44,5 +52,5 @@ export const Sidebar = ({ pathname, title }: Props) => {
         </li>
       </ul>
     </div>
-  `;
-}
+    `
+    }

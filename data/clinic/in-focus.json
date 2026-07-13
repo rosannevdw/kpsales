@@ -1,10 +1,10 @@
 {
-  "order": 2,
-  "title": "Internal Medicine",
+  "order": 4,
+  "title": "In focus",
   "slides": [
     {
-      "title": "Slide 1",
-      "body": "test",
+      "title": "Film",
+      "body": "play",
       "images": [
         {
           "src": "/media/precisionmedicine.jpg",
