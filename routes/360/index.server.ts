@@ -8,17 +8,20 @@ export const GET = (req: Request) =>
       req,
       title: "A 360° Approach",
       children: html`
-        <ul class="col4">
-          ${pillars.map(p => html`
-            <li class="image-tile">
-            <a href=${p.slug}>
-              <img src="/media/precisionmedicine.jpg" alt="">
-              <h3>${p.title}</h3>
-            </a>
-          </li>
-            `)}
-        </ul>
-
+        <div class="maingrid">
+          <div>
+          </div>
+          <ul class="col4">
+            ${pillars.map(p => html`
+              <li class="image-tile">
+              <a href=${p.slug}>
+                <img src="/media/precisionmedicine.jpg" alt="">
+                <h3>${p.title}</h3>
+              </a>
+            </li>
+              `)}
+          </ul>
+        </div>
       `,
     }),
   );

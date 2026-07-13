@@ -13,11 +13,6 @@ export const Sidebar = ({ pathname, title }: Props) => {
 
   return html`
     <div class="sidebar">
-      <div>
-        <h3>${title}</h3>
-        <h2>Title</h2>
-        <p>Maybe intro text</p>
-      </div>
       <ul class="navigation">
         <li>
           <a href="/360/">360° Approach</a>

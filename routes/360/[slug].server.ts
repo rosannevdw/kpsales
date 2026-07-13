@@ -11,15 +11,19 @@ export const GET = (req: Request) => {
       req,
       title: pillar.title,
       children: html`
-      <ul class="slider">
-        ${pillar.slides.map(slide => html`
-        <li class="slide" style="--image-count: ${slide.images.filter(i => !i.large).length}">
-          ${slide.images.map(image => html`
-           <img src=${image.src} alt="" class=${image.large ? "largeimg" : ""}>
-          `)}
-        </li>
-          `)}
-      </ul>
+        <ul class="slider">
+          ${pillar.slides.map(slide => html`  
+          <li class="slidetext">
+            <h2>${slide.title}</h2>
+            <p>${slide.body}</p>
+          </li>
+          <li class="slide" style="--image-count: ${slide.images.filter(i => !i.large).length}">
+            ${slide.images.map(image => html`
+            <img src=${image.src} alt="" class=${image.large ? "largeimg" : ""}>
+            `)}
+          </li>
+            `)}
+        </ul>
       `,
     }),
   );
