@@ -2,6 +2,8 @@ import { getParams, html, htmlToResponse } from "@mastrojs/mastro";
 import { Layout } from "../../components/Layout.ts";
 import { pillars } from "../../models/pillars.ts";
 
+export const getStaticPaths = () => pillars.map(p => `/360/${p.slug}/`);
+
 export const GET = (req: Request) => {
   const { slug } = getParams(req);
   const pillar = pillars.find(p => p.slug === slug);
