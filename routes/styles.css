@@ -89,12 +89,12 @@ h1 {
   font-family: var(--font-display);
 }
 h2 {
-  font-size: 2em;
+  font-size: 1.8em;
   font-family: var(--font-display);
 }
 h3 {
   text-transform: uppercase;
-  font-size: 0.8em;
+  font-size: 0.9em;
   font-family: var(--font-main);
 }
 
@@ -153,11 +153,13 @@ table {
     text-transform: uppercase;
     font-size: 0.8em;
     letter-spacing: var(--spacing-wider);
-    > li {
-      margin-top: 0.9ch;
-    }
-    li:not(:last-child) {
+    li {
+      padding: 0.9ch 0 0.9ch 0;
       border-bottom: solid 1px color-mix(in srgb, var(--color-main) 35%, transparent);
+    }
+    li:last-child {
+      border-bottom: none;
+      padding: 0.9ch 0 0 0;
     }
     align-self: end;
     .subnav {
@@ -287,15 +289,14 @@ body.page-index main {
 .image-tile {
   min-width: 0;
   min-height: 0;
-}
-
-.image-tile a {
-  position: relative;
-  display: grid;
-  place-items: center;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+  a {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
 }
 .image-tile a:hover {
   opacity: 0.75;
