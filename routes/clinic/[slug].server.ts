@@ -2,8 +2,6 @@ import { getParams, html, htmlToResponse } from "@mastrojs/mastro";
 import { Layout } from "../../components/Layout.ts";
 import { clinic } from "../../models/clinic.ts";
 
-export const getStaticPaths = () => clinic.map(c => `/clinic/${c.slug}/`);
-
 export const GET = (req: Request) => {
   const { slug } = getParams(req);
   const clinicPage = clinic.find(c => c.slug === slug);
