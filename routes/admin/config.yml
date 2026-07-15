@@ -2,7 +2,7 @@
 
 backend:
   name: github
-  repo: user/repo
+  repo: rosannevdw/kpsales
 
 media_folder: /routes/media
 public_folder: /media
