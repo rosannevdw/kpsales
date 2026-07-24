@@ -18,12 +18,14 @@ export const Sidebar = ({ pathname, title }: Props) => {
   }));
   const showPillarsSubnav = pathname === "/360/" || pathname.startsWith("/360/");
   const showClinicSubnav = pathname === "/clinic/" || pathname.startsWith("/clinic/");
+  const showZurich = pathname === "/zurich/" || pathname.startsWith("/zurich/");
+  const showGallery = pathname === "/gallery/" || pathname.startsWith("/gallery/");
 
   return html`
     <div class="sidebar">
       <ul class="navigation">
         <li>
-          <a href="/zurich/">Zurich Switzerland</a>
+          <a href="/zurich/" class=${showZurich ? "active" : ""}>Zurich Switzerland</a>
         </li>
         <li>
           <a href="/360/" class=${showPillarsSubnav ? "active" : ""}>360° Approach</a>
@@ -54,7 +56,7 @@ export const Sidebar = ({ pathname, title }: Props) => {
             : ""}
         </li>
         <li>
-          <a href="/gallery/">Gallery</a>
+          <a href="/gallery/" class=${showGallery ? "active" : ""}>Gallery</a>
         </li>
       </ul>
     </div>
