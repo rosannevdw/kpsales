@@ -16,7 +16,6 @@ export const GET = (req: Request) =>
               <li class="image-tile">
               <a href=${`/gallery/${p.slug}`}>
                 <img src=${p.image} alt="">
-                <h3>${p.title}</h3>
               </a>
             </li>
               `)}
