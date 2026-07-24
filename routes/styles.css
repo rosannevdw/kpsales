@@ -331,7 +331,7 @@ body.page-index main {
   .slide {
     animation: slide-fade linear both;
     animation-timeline: view(y);
-    animation-range: entry 0% exit 100%;
+    animation-range: entry 10% exit 90%;
   }
   @keyframes slide-fade {
     0%,
@@ -339,8 +339,8 @@ body.page-index main {
       opacity: 0;
     }
 
-    20%,
-    80% {
+    40%,
+    60% {
       opacity: 1;
     }
   }
@@ -351,13 +351,13 @@ body.page-index main {
   }
   @keyframes slidetext-fade {
     0%,
-    20%,
+    40%,
     100% {
       opacity: 0;
     }
 
     50%,
-    76% {
+    80% {
       opacity: 1;
     }
   }

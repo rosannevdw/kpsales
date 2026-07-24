@@ -63,7 +63,7 @@ collections:
             - { label: Image, name: src, widget: image }
             - { label: Large?, name: large, widget: boolean, default: false, required: false  }
   - name: gallery
-    label: gallery
+    label: Gallery
     folder: /gallery
     format: json
     reorder: true
