@@ -356,13 +356,6 @@ body.page-index main {
   opacity: 0.75;
 }
 
-.image-tile a::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgb(0 0 0 / 0.18);
-}
-
 .image-tile img {
   position: absolute;
   inset: 0;
