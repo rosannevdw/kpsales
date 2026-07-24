@@ -64,11 +64,43 @@ collections:
             - { label: Large?, name: large, widget: boolean, default: false, required: false  }
   - name: gallery
     label: Gallery
-    folder: /gallery
+    folder: /data/gallery
     format: json
     reorder: true
     sortable_fields: []
     fields:
+      - label: Theme Title
+        name: title
+        widget: string
+      - label: Theme Image
+        name: image
+        widget: image
+      - label: Slides
+        name: slides
+        widget: list
+        fields:
+          - { label: Slide Title, name: title, widget: string }
+          - label: Slide Images
+            name: images
+            widget: list
+            min: 1
+            max: 6
+            fields: 
+            - { label: Image, name: src, widget: image }
+            - { label: Large?, name: large, widget: boolean, default: false, required: false  }
+  - name: zurich
+    label: Zurich Switzerland
+    folder: /data/zurich
+    format: json
+    reorder: true
+    sortable_fields: []
+    fields:
+      - label: Theme Title
+        name: title
+        widget: string
+      - label: Theme Image
+        name: image
+        widget: image
       - label: Slides
         name: slides
         widget: list

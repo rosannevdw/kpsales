@@ -23,7 +23,7 @@ export const Sidebar = ({ pathname, title }: Props) => {
     <div class="sidebar">
       <ul class="navigation">
         <li>
-          <a href="/zurich">Zurich Switzerland</a>
+          <a href="/zurich/">Zurich Switzerland</a>
         </li>
         <li>
           <a href="/360/" class=${showPillarsSubnav ? "active" : ""}>360° Approach</a>
@@ -54,7 +54,7 @@ export const Sidebar = ({ pathname, title }: Props) => {
             : ""}
         </li>
         <li>
-          <a href="/gallery">Gallery</a>
+          <a href="/gallery/">Gallery</a>
         </li>
       </ul>
     </div>
