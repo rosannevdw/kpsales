@@ -1,11 +1,11 @@
 {
-  "title": "Zurich",
+  "title": "",
   "image": "/media/map_Europe_3D.jpg",
   "slides": [
     {
       "images": [
         {
-          "src": "/media/precisionmedicine.jpg",
+          "src": "/media/map_Zurich_notfinal.jpg",
           "large": false
         }
       ]
