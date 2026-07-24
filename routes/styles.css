@@ -329,17 +329,19 @@ body.page-index main {
 
 @supports (animation-timeline: view()) {
   .slide {
-    animation: slide-fade linear both;
+    animation: slide-fade ease-in-out both;
     animation-timeline: view(y);
-    animation-range: entry 30% exit 70%;
+    animation-range: entry 20% exit 90%;
   }
   @keyframes slide-fade {
     0%,
+    10%,
+    90%,
     100% {
       opacity: 0;
     }
 
-    40%,
+    30%,
     65% {
       opacity: 1;
     }
