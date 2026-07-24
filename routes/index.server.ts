@@ -8,7 +8,7 @@ export const GET = () =>
       children: html`
       
       <div class="startscreen">
-        <a href="/360/" class="logo" data-transition-link>
+        <a href="/zurich/" class="logo" data-transition-link>
           <img
           src="media/TKP_Linen.svg"
           alt="Kusnacht Practice Logo" />
