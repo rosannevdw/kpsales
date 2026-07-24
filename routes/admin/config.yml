@@ -15,14 +15,17 @@ collections:
     reorder: true
     sortable_fields: []
     fields:
-      - label: Title
+      - label: Theme Title
         name: title
         widget: string
+      - label: Theme Image
+        name: image
+        widget: image
       - label: Slides
         name: slides
         widget: list
         fields:
-          - { label: Slide Title, name: title, widget: string }
+          - { label: Slide Title, name: title, widget: string, required: false }
           - { label: Slide Body, name: body, widget: markdown, required: false }
           - label: Slide Images
             name: images
@@ -39,9 +42,12 @@ collections:
     reorder: true
     sortable_fields: []
     fields:
-      - label: Title
+      - label: Theme Title
         name: title
         widget: string
+      - label: Theme Image
+        name: image
+        widget: image
       - label: Slides
         name: slides
         widget: list
@@ -56,4 +62,22 @@ collections:
             fields: 
             - { label: Image, name: src, widget: image }
             - { label: Large?, name: large, widget: boolean, default: false, required: false  }
-  
+  - name: gallery
+    label: gallery
+    folder: /gallery
+    format: json
+    reorder: true
+    sortable_fields: []
+    fields:
+      - label: Slides
+        name: slides
+        widget: list
+        fields:
+          - label: Slide Images
+            name: images
+            widget: list
+            min: 1
+            max: 6
+            fields: 
+            - { label: Image, name: src, widget: image }
+            - { label: Large?, name: large, widget: boolean, default: false, required: false  }

@@ -1,6 +1,7 @@
 {
   "order": 2,
-  "title": "About the Practice",
+  "title": "Our Story",
+  "image": "/media/precisionmedicine.jpg",
   "slides": [
     {
       "title": "Our Story",

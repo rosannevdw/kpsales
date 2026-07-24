@@ -296,6 +296,8 @@ body.page-index main {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    transition: opacity 0.25s;
+    transition-duration: opacity 0.5s;
   }
 }
 .image-tile a:hover {
@@ -323,4 +325,48 @@ body.page-index main {
   margin: 0;
   color: white;
   text-align: center;
+}
+
+@supports (animation-timeline: view()) {
+  .slide {
+    animation: slide-fade linear both;
+    animation-timeline: view(y);
+    animation-range: entry 0% exit 100%;
+  }
+  @keyframes slide-fade {
+    0%,
+    100% {
+      opacity: 0;
+    }
+
+    20%,
+    80% {
+      opacity: 1;
+    }
+  }
+  .slidetext {
+    animation: slidetext-fade linear both;
+    animation-timeline: view(y);
+    animation-range: entry 0% exit 100%;
+  }
+  @keyframes slidetext-fade {
+    0%,
+    20%,
+    100% {
+      opacity: 0;
+    }
+
+    50%,
+    76% {
+      opacity: 1;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slidetext,
+  .slide {
+    animation: none;
+    opacity: 1;
+  }
 }

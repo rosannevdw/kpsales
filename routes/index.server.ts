@@ -4,7 +4,7 @@ import { Startpage } from "../components/Startpage.ts";
 export const GET = () =>
   htmlToResponse(
     Startpage({
-      title: "Kusnacht Practice Presentation",
+      title: "Zurich, Switzerland",
       children: html`
       
       <div class="startscreen">
@@ -12,9 +12,6 @@ export const GET = () =>
           <img
           src="media/TKP_Linen.svg"
           alt="Kusnacht Practice Logo" />
-        </a>
-        <a href="/clinic/infocus" class="movielink">
-           &rarr; KP film
         </a>
       </div>
 

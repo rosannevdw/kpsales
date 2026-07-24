@@ -15,7 +15,7 @@ export const GET = (req: Request) =>
             ${pillars.map(p => html`
               <li class="image-tile">
               <a href=${p.slug}>
-                <img src="/media/precisionmedicine.jpg" alt="">
+                <img src=${p.image} alt="">
                 <h3>${p.title}</h3>
               </a>
             </li>

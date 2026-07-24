@@ -15,7 +15,7 @@ export const GET = (req: Request) =>
             ${clinic.map(c => html`
               <li class="image-tile">
               <a href=${c.slug}>
-                <img src="/media/precisionmedicine.jpg" alt="">
+                <img src=${c.image} alt="">
                 <h3>${c.title}</h3>
               </a>
             </li>

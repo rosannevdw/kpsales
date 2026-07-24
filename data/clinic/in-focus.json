@@ -1,6 +1,7 @@
 {
   "order": 4,
-  "title": "In focus",
+  "title": "Watch",
+  "image": "/media/precisionmedicine.jpg",
   "slides": [
     {
       "title": "Film",
