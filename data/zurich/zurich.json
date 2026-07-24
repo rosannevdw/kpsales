@@ -1,0 +1,14 @@
+{
+  "title": "Where we are",
+  "image": "/media/precisionmedicine.jpg",
+  "slides": [
+    {
+      "images": [
+        {
+          "src": "/media/precisionmedicine.jpg",
+          "large": false
+        }
+      ]
+    }
+  ]
+}

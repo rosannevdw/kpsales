@@ -1,0 +1,32 @@
+{
+  "title": "Gallery",
+  "image": "/media/precisionmedicine.jpg",
+  "slides": [
+    {
+      "title": "Slide 1",
+      "images": [
+        {
+          "src": "/media/precisionmedicine.jpg",
+          "large": false
+        }
+      ]
+    }
+    {
+      "title": "Slide 1",
+      "images": [
+        {
+          "src": "/media/precisionmedicine.jpg",
+          "large": true
+        },
+        {
+          "src": "/media/precisionmedicine.jpg",
+          "large": false
+        },
+        {
+          "src": "/media/precisionmedicine.jpg",
+          "large": false
+        }
+      ]
+    },
+  ]
+}
