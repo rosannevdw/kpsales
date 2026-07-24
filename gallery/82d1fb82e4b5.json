@@ -1,0 +1,17 @@
+{
+  "order": 1,
+  "slides": [
+    {
+      "images": [
+        {
+          "src": "/media/precisionmedicine.jpg",
+          "large": false
+        },
+        {
+          "src": "/media/precisionmedicine.jpg",
+          "large": false
+        }
+      ]
+    }
+  ]
+}
