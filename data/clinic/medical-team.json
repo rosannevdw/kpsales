@@ -1,0 +1,17 @@
+{
+  "order": 4,
+  "title": "Medical Team",
+  "image": "/media/precisionmedicine.jpg",
+  "slides": [
+    {
+      "title": "Medical Team",
+      "body": "Test",
+      "images": [
+        {
+          "src": "/media/precisionmedicine.jpg",
+          "large": false
+        }
+      ]
+    }
+  ]
+}
