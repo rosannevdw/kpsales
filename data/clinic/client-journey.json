@@ -4,11 +4,11 @@
   "image": "/media/Book_men_steness.jpeg",
   "slides": [
     {
-      "title": "Step 1",
-      "body": "lorem ipsum",
+      "title": "Client Journey",
+      "body": "### 1. Request for Treatment\n\nYour journey begins with a confidential conversation. We listen to your needs, clarify your goals, and determine whether our programme is the right fit for you.\n\n### 2. Pre-Admission\n\nTogether with a lead doctor, we gather your medical history, clarify key questions, and align on expectations. Admission paperwork and pre-payment are required before your arrival.\n\n### 3. Residential Treatment\n\nYour personalised programme begins in one of our private residences. With 24/7 care and a tailored daily schedule, every element is designed to support your healing and transformation.\n\n### 4. Discharge\n\nBefore your departure, we review your progress and share a comprehensive report with personalised medical and therapeutic recommendations to support your next chapter.\n\n### 5. Continuous Care\n\nWe stay by your side as you transition home. Through regular consultations, we help you maintain momentum, adjust your plan, and ensure long-term outcomes.\n\n### 6. Recharge Stays\n\nOur Recharge Stays offer the opportunity to return for focused reset, renewed assessments, and a full system reset whenever you need to reconnect with your health goals.",
       "images": [
         {
-          "src": "/media/precisionmedicine.jpg",
+          "src": "/media/2026_Customer-Journey-Map_Matterhorn.png",
           "large": false
         }
       ]
