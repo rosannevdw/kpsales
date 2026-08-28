@@ -1,10 +1,10 @@
 {
   "order": 3,
-  "title": "BIO-R® method",
-  "image": "/media/precisionmedicine.jpg",
+  "title": "Precision Medicine",
+  "image": "/media/ajeet-nishad-ivsAZUaMYk4-unsplash.jpg",
   "slides": [
     {
-      "title": "Slide 1",
+      "title": "BIO-R® method",
       "body": "test",
       "images": [
         {
