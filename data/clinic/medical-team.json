@@ -4,8 +4,28 @@
   "image": "/media/precisionmedicine.jpg",
   "slides": [
     {
-      "title": "Medical Team",
+      "title": "Mental Health Experts",
       "body": "Test",
+      "images": [
+        {
+          "src": "/media/precisionmedicine.jpg",
+          "large": false
+        }
+      ]
+    },
+    {
+      "title": "Internal Medicine Specialists",
+      "body": "",
+      "images": [
+        {
+          "src": "/media/precisionmedicine.jpg",
+          "large": false
+        }
+      ]
+    },
+    {
+      "title": "Precicion Medicine Team",
+      "body": "",
       "images": [
         {
           "src": "/media/precisionmedicine.jpg",
