@@ -1,0 +1,18 @@
+{
+  "order": 3,
+  "title": "Bio-R Method",
+  "image": "/media/Cherrys_1_steness.jpeg",
+  "slides": [
+    {
+      "title": "Slide 1",
+      "body": "test new",
+      "images": [
+        {
+          "src": "/media/precisionmedicine.jpg",
+          "large": false
+        }
+      ]
+    }
+  ]
+}
+
