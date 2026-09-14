@@ -324,12 +324,61 @@ body.page-index main {
   display: grid;
   grid-template-columns: 1fr 3fr;
 }
+.centeritems {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  z-index: 10;
+  position: absolute;
+  width: calc((100% - (var(--page-padding) * 1)) - 320px);
+  height: calc(100vh - (var(--page-padding) * 2));
+}
+.whitecircle {
+  border-radius: 50%;
+  text-align: center;
+  width: 320px;
+  height: 320px;
+  background-color: white;
+  padding-top: 150px;
+  box-sizing: border-box;
+}
 .col4 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   height: calc(100vh - (var(--page-padding) * 2));
   margin: 0;
   gap: 1em;
+}
+.col2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: calc(100vh - (var(--page-padding) * 2));
+  margin: 0;
+  gap: 1em;
+}
+.col360 {
+  li:nth-child(1) {
+    a img {
+        border-top-left-radius: 100%;
+    }
+  }
+  li:nth-child(2) {
+    a img {
+        border-top-right-radius: 100%;
+      }
+  }
+  li:nth-child(3) {
+    a img {
+        border-bottom-left-radius: 100%;
+    }
+  }
+  li:nth-child(4) {
+    a {
+      img {
+        border-bottom-right-radius: 100%;
+      }
+    }
+  }
 }
 .col1 {
   display: grid;

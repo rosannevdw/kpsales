@@ -11,16 +11,23 @@ export const GET = (req: Request) =>
         <div class="maingrid">
           <div>
           </div>
-          <ul class="col4">
-            ${pillars.map(p => html`
-              <li class="image-tile">
-              <a href=${p.slug}>
-                <img src=${p.image} alt="">
-                <h3>${p.title}</h3>
-              </a>
-            </li>
-              `)}
-          </ul>
+          <div>
+              <div class="centeritems">
+                <div class="whitecircle">
+                  <h3>our 360° approach</h3>
+                </div>
+              </div>
+            <ul class="col2 col360">
+              ${pillars.map(p => html`
+                <li class="image-tile">
+                  <a href=${p.slug}>
+                    <img src=${p.image} alt="">
+                    <h3>${p.title}</h3>
+                  </a>
+                </li>
+                `)}
+            </ul>
+          <div>
         </div>
       `,
     }),
