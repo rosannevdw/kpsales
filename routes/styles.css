@@ -324,14 +324,17 @@ body.page-index main {
   display: grid;
   grid-template-columns: 1fr 3fr;
 }
+.tilewrap {
+  position: relative;
+}
 .centeritems {
   display: grid;
   justify-items: center;
   align-items: center;
   z-index: 10;
   position: absolute;
-  width: calc((100% - (var(--page-padding) * 1)) - 320px);
-  height: calc(100vh - (var(--page-padding) * 2));
+  inset: 0;
+  pointer-events: none;
 }
 .whitecircle {
   border-radius: 50%;
@@ -341,10 +344,18 @@ body.page-index main {
   background-color: white;
   padding-top: 150px;
   box-sizing: border-box;
+  pointer-events: auto;
 }
 .col4 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  height: calc(100vh - (var(--page-padding) * 2));
+  margin: 0;
+  gap: 1em;
+}
+.col1 {
+  display: grid;
+  grid-template-columns: 1fr;
   height: calc(100vh - (var(--page-padding) * 2));
   margin: 0;
   gap: 1em;
@@ -380,13 +391,6 @@ body.page-index main {
     }
   }
 }
-.col1 {
-  display: grid;
-  grid-template-columns: 1fr;
-  height: calc(100vh - (var(--page-padding) * 2));
-  margin: 0;
-  gap: 1em;
-}
 .image-tile {
   min-width: 0;
   min-height: 0;
@@ -408,8 +412,8 @@ body.page-index main {
 .image-tile img {
   position: absolute;
   inset: 0;
-  width: 100%;
   height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 

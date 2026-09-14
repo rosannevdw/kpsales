@@ -11,12 +11,12 @@ export const GET = (req: Request) =>
         <div class="maingrid">
           <div>
           </div>
-          <div>
-              <div class="centeritems">
-                <div class="whitecircle">
-                  <h3>our 360° approach</h3>
-                </div>
+          <div class="tilewrap">
+            <div class="centeritems">
+              <div class="whitecircle">
+                <h3>our 360° approach</h3>
               </div>
+            </div>
             <ul class="col2 col360">
               ${pillars.map(p => html`
                 <li class="image-tile">
@@ -27,7 +27,7 @@ export const GET = (req: Request) =>
                 </li>
                 `)}
             </ul>
-          <div>
+          </div>
         </div>
       `,
     }),
