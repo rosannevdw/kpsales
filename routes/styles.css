@@ -321,21 +321,18 @@ body.page-index main {
 }
 .tilewrap {
   position: relative;
-}
-.centeritems {
-  display: grid;
-  justify-items: center;
-  align-items: center;
-  z-index: 10;
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
+  width: calc(100vh - (var(--page-padding) * 2));
 }
 .whitecircle {
+  --width: 280px;
+  position: absolute;
+  top: calc(50% - var(--width) / 2);
+  left: calc(50% - var(--width) / 2);
+  z-index: 10;
   border-radius: 50%;
   text-align: center;
-  width: 280px;
-  height: 280px;
+  width: var(--width);
+  height: var(--width);
   background-color: white;
   padding-top: 130px;
   box-sizing: border-box;

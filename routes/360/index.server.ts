@@ -12,10 +12,8 @@ export const GET = (req: Request) =>
           <div>
           </div>
           <div class="tilewrap">
-            <div class="centeritems">
-              <div class="whitecircle">
-                <h3>Our 360° approach</h3>
-              </div>
+            <div class="whitecircle">
+              <h3>Our 360° approach</h3>
             </div>
             <ul class="col2 col360">
               ${pillars.map(p => html`
