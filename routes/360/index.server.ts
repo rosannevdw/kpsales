@@ -14,7 +14,7 @@ export const GET = (req: Request) =>
           <div class="tilewrap">
             <div class="centeritems">
               <div class="whitecircle">
-                <h3>our 360° approach</h3>
+                <h3>Our 360° approach</h3>
               </div>
             </div>
             <ul class="col2 col360">
