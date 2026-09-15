@@ -268,6 +268,13 @@ body.page-index main {
 }
 .slidetext {
   padding-right: 2em;
+  ul, ol {
+    margin-top: 1lh;
+    padding-left: 1.25em;
+  }
+  li {
+    list-style-type: disc;
+  }
 }
 .slider::-webkit-scrollbar {
   display: none;

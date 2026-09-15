@@ -1,6 +1,7 @@
 import { getParams, html, htmlToResponse } from "@mastrojs/mastro";
 import { Layout } from "../../components/Layout.ts";
 import { clinic } from "../../models/clinic.ts";
+import { markdownToHtml } from "@mastrojs/markdown";
 
 export const getStaticPaths = () => clinic.map(c => `/clinic/${c.slug}`);
 
@@ -14,10 +15,10 @@ export const GET = (req: Request) => {
       title: clinicPage.title,
       children: html`
         <ul class="slider">
-          ${clinicPage.slides.map(slide => html`  
+          ${clinicPage.slides.map(async slide => html`  
           <li class="slidetext">
             <h2>${slide.title}</h2>
-            <p>${slide.body}</p>
+            <p>${(await markdownToHtml(slide.body)).content}</p>
           </li>
           <li class="slide" style="--image-count: ${slide.images.filter(i => !i.large).length}">
             ${slide.images.map(image => html`
