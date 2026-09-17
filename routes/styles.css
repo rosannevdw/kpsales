@@ -165,7 +165,8 @@ table {
   width: 20vw;
   min-height: 25vh;
   display: flex;
-  background: white;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 1) 10%);
+  padding-top: 3ch;
   z-index: 99;
   a {
     opacity: 0.35;
@@ -179,19 +180,25 @@ table {
     font-size: 0.8em;
     letter-spacing: var(--spacing-wider);
     li {
-      padding: 2ch 0 2ch 0;
       border-bottom: solid 1px color-mix(in srgb, var(--color-main) 35%, transparent);
+      a {
+        padding: 2ch 0 2ch 0;
+        display: inline-block;
+      }
     }
     li:last-child {
       border-bottom: none;
-      padding: 2ch 0 0 0;
     }
     align-self: end;
     .subnav {
-      padding-left: 1.5em;;
+      padding-left: 1.5em;
+      li:first-child a {
+        padding: 0 0 2ch 0;
+      }
     }
   }
 }
+
 
 /*start screen*/
 body.page-index main {
@@ -268,12 +275,18 @@ body.page-index main {
 }
 .slidetext {
   padding-right: 2em;
+  max-height: 60vh;
+  overflow-y: scroll;
+  -webkit-scrollbar { display: none; }
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   ul, ol {
-    margin-top: 1lh;
+    margin-top: 2lh;
     padding-left: 1.25em;
   }
   li {
     list-style-type: disc;
+    padding: 0 0 0.35lh 0;
   }
 }
 .slider::-webkit-scrollbar {
