@@ -1,7 +1,6 @@
-import { ghPagesBasePath, html, type Html } from "@mastrojs/mastro";
+import { html, type Html } from "@mastrojs/mastro";
 import { Sidebar } from "./Sidebar.ts";
-
-export const basePath = ghPagesBasePath();
+import { Head } from "./Head.ts";
 
 interface Props {
   title: string;
@@ -16,11 +15,7 @@ export const Layout = (props: Props) => {
   return html`
     <!doctype html>
     <html lang="en">
-      <head>
-        <title>${title}</title>
-        <link rel="stylesheet" href=${basePath + "/styles.css"}>
-        <meta name="viewport" content="width=device-width">
-      </head>
+      ${Head({ title })}
       <body class=${props.bodyClass ?? ""}>
         ${Sidebar({ title, pathname })}
 

@@ -1,6 +1,5 @@
-import { ghPagesBasePath, html, type Html } from "@mastrojs/mastro";
-
-export const basePath = ghPagesBasePath();
+import { html, type Html } from "@mastrojs/mastro";
+import { Head } from "./Head.ts";
 
 interface Props {
   title: string;
@@ -14,11 +13,7 @@ export const FullscreenLayout = (props: Props) => {
   return html`
     <!doctype html>
     <html lang="en">
-      <head>
-        <title>${props.title}</title>
-        <link rel="stylesheet" href=${basePath + "/styles.css"}>
-        <meta name="viewport" content="width=device-width">
-      </head>
+      ${Head({ title: props.title })}
       <body class="page-full">
 
         <a href=${props.backHref} class="exit-link" aria-label="Back to overview">&times;</a>
