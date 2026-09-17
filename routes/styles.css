@@ -166,7 +166,7 @@ table {
   min-height: 25vh;
   display: flex;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 1) 10%);
-  padding-top: 3ch;
+  padding-top: 2ch;
   z-index: 99;
   a {
     opacity: 0.35;
@@ -275,7 +275,7 @@ body.page-index main {
 }
 .slidetext {
   padding-right: 2em;
-  max-height: 60vh;
+  max-height: 55vh;
   overflow-y: scroll;
   -webkit-scrollbar { display: none; }
   scrollbar-width: none;

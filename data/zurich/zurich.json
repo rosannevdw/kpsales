@@ -1,11 +1,11 @@
 {
   "title": "Zurich",
-  "image": "/media/map_europe_1.jpg",
+  "image": "/media/map_europe_1.avif",
   "slides": [
     {
       "images": [
         {
-          "src": "/media/map_zurich_1.jpg",
+          "src": "/media/map_zurich_1.avif",
           "large": false
         }
       ]
