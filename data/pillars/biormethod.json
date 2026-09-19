@@ -1,11 +1,11 @@
 {
   "order": 3,
-  "title": "Bio-R Method",
+  "title": "Precision Medicine",
   "image": "/media/Cherrys_1_steness.jpeg",
   "slides": [
     {
-      "title": "Slide 1",
-      "body": "test new",
+      "title": "BIO-R®",
+      "body": "This is where our care becomes truly personal. Through advanced diagnostics — including biochemical, genetic and laboratory analysis — we build a detailed picture of each client's individual makeup.\n\nOur BIO-R® approach uses this data to restore biochemical balance, replenish deficiencies and support the body at a cellular level. The result is a programme shaped by science and tailored to the individual, not a template.",
       "images": [
         {
           "src": "/media/precisionmedicine.jpg",
