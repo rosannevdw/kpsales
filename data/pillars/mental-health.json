@@ -12,6 +12,20 @@
           "large": false
         }
       ]
+    },
+    {
+      "title": "What do we treat?",
+      "body": "- Drug Addiction\n- Alcoholism\n- Depression\n- Burnout\n- Trauma\n- Anxiety Disorder\n- Perinatal Mental Health & Wellbeing",
+      "images": [
+        {
+          "src": "/media/hand_unsplash.jpg",
+          "large": false
+        },
+        {
+          "src": "/media/Mental Health_Pexel.jpeg",
+          "large": false
+        }
+      ]
     }
   ]
 }
