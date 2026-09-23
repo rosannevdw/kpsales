@@ -1,14 +1,18 @@
 {
   "order": 2,
   "title": "Internal Medicine",
-  "image": "/media/Shrimp_small_steness.jpg",
+  "image": "/media/Decoration_2_steness.jpeg",
   "slides": [
     {
       "title": "Internal Medicine",
-      "body": "Physical and mental health are deeply linked. Our internal medicine specialists carry out thorough assessments to uncover any underlying medical issues that may affect recovery.\n\nFrom cardiovascular and metabolic health to sleep, nutrition and chronic conditions, we ensure the body is properly supported throughout the programme. This medical foundation gives every client the best possible start.",
+      "body": "Physical and mental health are deeply linked. Our internal medicine specialists carry out thorough assessments to uncover any underlying medical issues that may affect recovery.\n\nFrom cardiovascular and metabolic health to sleep, nutrition and chronic conditions, we ensure the body is properly supported throughout the programme.",
       "images": [
         {
-          "src": "/media/precisionmedicine.jpg",
+          "src": "/media/Labor_small.jpg",
+          "large": false
+        },
+        {
+          "src": "/media/Man_stretching_Square.png",
           "large": false
         }
       ]
