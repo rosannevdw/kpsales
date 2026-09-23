@@ -8,7 +8,11 @@
       "body": "BIO-R® (Biomolecular Restoration) is our pioneering and proprietary precision medicine approach that redefines what it means to feel at your very best.\n\nGoing beyond longevity, it restores optimal function at the biomolecular level. We help rejuvenate vitality, enhance performance, and empower your body's innate ability to regenerate.",
       "images": [
         {
-          "src": "/media/precisionmedicine.jpg",
+          "src": "/media/website_bior.jpeg",
+          "large": false
+        },
+        {
+          "src": "/media/website_bior_2.jpeg",
           "large": false
         }
       ]
